@@ -5,4 +5,4 @@ manifest: ./manifest.yml
 pkgout: ./
 # contentdir: 指定打包的内容，将会打包到 lpk 中
 #contentdir: ./dist
-icon: ./tower.png
+icon: ./icon.png
