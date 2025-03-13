@@ -1,0 +1,8 @@
+services:
+    avhub:
+        ports:
+            - <your_server_port>:80
+        volumes:
+            - $PWD:/app
+        container_name: avhub
+        image: levywang/avhub:latest

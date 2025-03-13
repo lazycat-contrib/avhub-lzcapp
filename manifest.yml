@@ -1,0 +1,23 @@
+lzc-sdk-version: "0.1"
+name: AvHub
+package: community.lazycat.app.avhub
+version: 1.0.0
+description: 成人视频资源管理平台
+homepage: https://github.com/levywang/avhub
+author: levywang
+application:
+  subdomain: avhub
+  background_task: true
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  public_path:
+    - /
+  routes:
+    - /=http://avhub:80/
+services:
+  avhub:
+    image:  docker.hlmirror.com/levywang/avhub:latest
+    binds:
+      - /lzcapp/var/app:/app

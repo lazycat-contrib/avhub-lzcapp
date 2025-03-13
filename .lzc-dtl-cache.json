@@ -1,0 +1,34 @@
+{
+  "name": "AvHub",
+  "package": "communicate.lazycat.app.avhub",
+  "description": "成人视频资源管理平台",
+  "homepage": "https://github.com/levywang/avhub",
+  "author": "levywang",
+  "app_features": [
+    "background_task",
+    "public_path"
+  ],
+  "subdomain": "avhub",
+  "version": "1.0.0",
+  "public_paths": [
+    "/"
+  ],
+  "iconPath": "icon.png",
+  "composePath": "docker-compose.yaml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "avhub_<your_server_port>_80": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_levywang_avhub_latest": {
+    "originalImage": "levywang/avhub:latest",
+    "pushTarget": "none"
+  },
+  "avhub_volume_$PWD_/app_action": "emptyDir",
+  "avhub_volume_/app_location": "app_data"
+}
