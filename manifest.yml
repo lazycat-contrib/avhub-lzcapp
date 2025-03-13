@@ -18,6 +18,5 @@ application:
     - /=http://avhub:80/
 services:
   avhub:
+    container_name: avhub
     image:  docker.hlmirror.com/levywang/avhub:latest
-    binds:
-      - /lzcapp/var/app:/app
