@@ -19,4 +19,16 @@ application:
 services:
   avhub:
     container_name: avhub
-    image:  docker.hlmirror.com/levywang/avhub:latest
+    image: docker.hlmirror.com/levywang/avhub:latest
+    binds:
+      - /lzcapp/var/data:/app/data
+    setup_script: |
+      if ! [ -f /app/data/config.yaml ];then
+        cp  /lzcapp/pkg/content/config.yaml /app/data
+      fi
+      if ! [ -f "/app/data/hacg.json" ];then
+        cp  /lzcapp/pkg/content/hacg.json /app/data
+      fi
+      if ! [ -f "/app/data/video_urls.txt" ];then
+        cp  /lzcapp/pkg/content/video_urls.txt /app/data
+      fi
