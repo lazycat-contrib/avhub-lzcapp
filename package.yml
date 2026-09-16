@@ -1,0 +1,14 @@
+package: community.lazycat.app.avhub
+version: 1.0.3
+name: AvHub
+description: "成人视频资源管理平台"
+min_os_version: "1.5.0"
+homepage: https://github.com/levywang/avhub
+author: levywang
+locales:
+  zh:
+    description: "成人视频资源管理平台"
+    name: AvHub
+  en:
+    description: "Adult video collection manager"
+    name: AvHub
